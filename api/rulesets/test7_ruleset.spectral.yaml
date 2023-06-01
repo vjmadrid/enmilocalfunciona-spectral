@@ -1,0 +1,9 @@
+extends: [[spectral:oas, all]]
+functions: [responses]
+rules:
+    default-response-fallback:
+        message: "Response object does not have 2xx operation or default set"
+        given: "$.paths.[*].[*].responses"
+        severity: error
+        then:
+            function: responses

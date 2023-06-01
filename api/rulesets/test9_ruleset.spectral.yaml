@@ -1,0 +1,3 @@
+extends:
+  - ./test2_ruleset.spectral.yaml
+  - ./test8_ruleset.spectral.yaml
