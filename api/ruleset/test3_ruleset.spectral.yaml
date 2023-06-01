@@ -1,0 +1,4 @@
+extends:
+  - ./test2_ruleset.spectral.yaml
+rules:
+  operation-description: off
