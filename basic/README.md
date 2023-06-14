@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 1)</h1>
+<h1>Primeros pasos con Spectral (Parte 1)</h1>
 
 
 
@@ -43,6 +43,11 @@ Este directorio se compone del directorio **"api/"** que es el lugar donde se ub
 * **rulesets/**: Directtorio que contiene los ficheros de reglas definidos
   * **rules/**: Subdirectorio que contiene las reglas declaradas de forma independiente
   * **functions/**: Subdirectorio que contiene al implementación de la validación de una regla
+
+
+>**Importante**
+>
+>Hay que tener en cuenta que en los escenarios tratados se hará usso de los enfoques explicados en el artículo teórico
 
 
 

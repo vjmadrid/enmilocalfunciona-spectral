@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 2)</h1>
+<h1>Primeros pasos con Spectral (Parte 2) : Implementar una Regla Custom</h1>
 
 
 
