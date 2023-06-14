@@ -1,4 +1,4 @@
-module.exports = (responseObjects) => { // eslint-disable-line consistent-return
+module.exports = (responseObjects) => {
     /**
      * Loop through the response objects
      */

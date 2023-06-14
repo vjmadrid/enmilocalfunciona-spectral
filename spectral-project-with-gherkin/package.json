@@ -1,0 +1,17 @@
+{
+  "name": "custom-rule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "oas:lint:one": "spectral lint ./examples/example1.yaml",
+    "oas:lint": "spectral lint ./examples/*",
+    "oas:lint-warning-as-errors": "spectral lint -F warn ./examples/example1.yaml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stoplight/spectral-core": "^1.18.0"
+  }
+}

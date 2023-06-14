@@ -1,0 +1,15 @@
+{
+  "name": "pre-commit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stoplight/spectral-core": "^1.18.0",
+    "husky": "^8.0.3"
+  }
+}

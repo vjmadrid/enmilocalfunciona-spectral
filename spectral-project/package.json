@@ -1,0 +1,15 @@
+{
+  "name": "spectral-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "oas:lint:one": "spectral lint ./examples/example1.yaml",
+    "oas:lint": "spectral lint ./examples/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stoplight/spectral-core": "^1.18.0"
+  }
+}

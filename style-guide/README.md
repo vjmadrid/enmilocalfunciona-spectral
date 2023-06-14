@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 2)</h1>
+<h1>Spectral (Parte 3)</h1>
 
 
 

@@ -1,0 +1,9 @@
+rules:
+    open-api-version-3:
+        description: APIs should support OpenAPI V3
+        given: $.openapi
+        severity: error
+        then:
+            function: pattern
+            functionOptions:
+                match: '^3'

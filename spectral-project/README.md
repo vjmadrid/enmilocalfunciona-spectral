@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 2)</h1>
+<h1>Spectral (Parte 3)</h1>
 
 
 
@@ -13,7 +13,10 @@
   - [Dependencias de terceros](#dependencias-de-terceros)
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
+  - [Instalar dependencias](#instalar-dependencias)
 - [Configuración](#configuración)
+  - [Implementar comando de análisis de un fichero](#implementar-comando-de-análisis-de-un-fichero)
+  - [Implementar comando de análisis de todos los ejemplos](#implementar-comando-de-análisis-de-todos-los-ejemplos)
 - [Uso](#uso)
   - [Ejecutar un análisis de un fichero](#ejecutar-un-análisis-de-un-fichero)
   - [Ejecutar un análisis de todos los ficheros](#ejecutar-un-análisis-de-todos-los-ficheros)
@@ -28,7 +31,7 @@
 En este parte del repositorio se va a enseñar a como implementar una regla customizada
 
 
-Nos encontramos en el directorio **"custom-rule/"**
+Nos encontramos en el directorio **"spectral-project/"**
 
 Este directorio se compone de:
 
@@ -53,7 +56,6 @@ Este proyecto se encuentra en construcción
 ### General
 
 * [Node.js](https://nodejs.org/es) >18.x.x
-* [Spectral CLI client](https://meta.stoplight.io/docs/spectral/9ffa04e052cc1-spectral-cli) 6.8.0
 
 
 ### Dependencias proyectos de arquitectura
@@ -63,7 +65,12 @@ N/A
 
 ### Dependencias de terceros
 
-N/A
+**Desarrollo**
+
+* **@stoplight/spectral-core** : Framework de Spectral
+  * [npm](https://www.npmjs.com/package/@stoplight/spectral-core)
+  * [Repositorio Git](https://github.com/stoplightio/spectral)
+  * [Documentacion](https://stoplight.io/open-source/spectral)
 
 
 
@@ -72,7 +79,6 @@ N/A
 ## Pre-Requisitos
 
 * Requerido tener instalado Node.js >18.x.x
-* Requerido tener instalado Spectral 6.8.0
 
 
 
@@ -80,16 +86,66 @@ N/A
 
 ## Instalación
 
-N/A
+### Crear un proyecto
 
+Pasos a seguir
+
+1. Crear un directorio de proyecto (Por ejemplo: custom-rule)
+2. Arrancar un terminal
+3. Localizar el PATH el directorio anterior
+4. Ejecutar el siguiente comando
+
+```bash
+npm init -y
+```
+
+
+
+### Instalar dependencias
+
+Pasos a seguir:
+
+1. Arrancar un terminal
+2. Localizar el PATH del proyecto
+3. Ejecutar el siguiente comando
+
+```bash
+npm install --save-dev @stoplight/spectral-core
+```
 
 
 
 
 ## Configuración
 
-N/A
+### Implementar comando de análisis de un fichero
 
+Pasos a seguir:
+
+1. Crear un script en el fichero **package.json**
+
+```bash
+"scripts": {
+    ...
+    "oas:lint:one": "spectral lint ./examples/example1.yaml",
+    ...
+  },
+```
+
+
+### Implementar comando de análisis de todos los ejemplos
+
+Pasos a seguir:
+
+1. Crear un script en el fichero **package.json**
+
+```bash
+"scripts": {
+    ...
+    "oas:lint": "spectral lint ./examples/*",
+    ...
+  },
+```
 
 
 
@@ -109,7 +165,7 @@ Pasos a seguir:
 3. Ejecutar el siguiente comando
 
 ```bash
-spectral lint ./examples/example1.yaml
+npm run oas:lint:one
 ```
 
 
@@ -122,7 +178,7 @@ Pasos a seguir:
 3. Ejecutar el siguiente comando
 
 ```bash
-spectral lint ./examples/*
+npm run oas:lint
 ```
 
 

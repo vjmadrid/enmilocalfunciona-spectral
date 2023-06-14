@@ -25,8 +25,12 @@ Este repositorio se encarga de servir como una estructura de los recursos utiliz
 
 * [Primeros pasos con Spectral (Parte 1)](xxx) :  Artículo de introducción a Spectral que hace uso de diferentes ejemplos
   * Su directorio de trabajo es **"basic/"**
-
-
+* [Primeros pasos con Spectral (Parte 2)](xxx) :  Artículo que enseñará a como crear una regla customizada y usarla
+  * Su directorio de trabajo es **"custom-rule/"**
+* [Primeros pasos con Spectral (Parte 3)](xxx) :  Artículo que enseñará a como crear una guía de estilo corporativa
+  * Su directorio de trabajo es **"style-guide/"**
+* [Primeros pasos con Spectral (Parte 4)](xxx) :  Artículo que enseñará a como crear un proyecto de Node que haga uso de spectral
+  * Su directorio de trabajo es **"spectral-project/"**
 
 
 
