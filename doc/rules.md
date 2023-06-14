@@ -38,3 +38,18 @@ hyphen-delimited-uris:
       function: pattern
       functionOptions:
         match: "^(?:\/(?:[a-z]+(?:-[a-z]+|)+|\\{[a-zA-Z]+\\}))+$"
+
+api-name-doesnt-contain-api:
+    description: The API name must not contain the word API
+    message: The info.title value "{{value}}" contains the forbidden word API
+    severity: error
+    formats:
+      - oas2
+      - oas3
+    given:
+      - $.info
+    then:
+      - field: title
+        function: pattern
+        functionOptions:
+          notMatch: /\b(api)\b/i

@@ -1,0 +1,4 @@
+extends:
+- spectral:oas
+- ./spectral/rules/schema-names-pascal-case.yaml
+rules: {}
