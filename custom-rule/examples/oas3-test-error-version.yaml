@@ -1,0 +1,18 @@
+openapi: 4.0.3
+info:
+  title: Employees API Spec
+  description: Working with employee details
+  version: v1
+paths:
+  /api/v1/employees:
+    get:
+      summary: Get list of employees
+      responses:
+        "200":
+          description: Request to get list of employees
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string

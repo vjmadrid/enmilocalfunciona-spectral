@@ -109,7 +109,7 @@ Pasos a seguir:
 3. Ejecutar el siguiente comando
 
 ```bash
-spectral lint ./examples/example1.yaml
+spectral lint ./examples/oas3-test.yaml
 ```
 
 
