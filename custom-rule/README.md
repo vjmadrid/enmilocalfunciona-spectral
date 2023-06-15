@@ -15,8 +15,9 @@
 - [Instalación](#instalación)
 - [Configuración](#configuración)
 - [Uso](#uso)
-  - [Ejecutar un análisis de un fichero](#ejecutar-un-análisis-de-un-fichero)
-  - [Ejecutar un análisis de todos los ficheros](#ejecutar-un-análisis-de-todos-los-ficheros)
+  - [Ejecutar un lintado de un fichero válido](#ejecutar-un-lintado-de-un-fichero-válido)
+  - [Ejecutar un lintado de un fichero inválido](#ejecutar-un-lintado-de-un-fichero-inválido)
+  - [Ejecutar un lintado de todos los ficheros](#ejecutar-un-lintado-de-todos-los-ficheros)
 - [Autor](#autor)
 
 
@@ -25,8 +26,9 @@
 
 ## Descripción
 
-En este parte del repositorio se va a enseñar a como implementar una regla customizada
+En este parte del repositorio se va a enseñar a comocrear una regla customizada y usarla mediante una propuesta de procedimiento.
 
+El procedimiento de creación de la regla se definirá en el artículo
 
 Nos encontramos en el directorio **"custom-rule/"**
 
@@ -34,7 +36,10 @@ Este directorio se compone de:
 
 * **examples/**: Directorio que contiene los ficheros a analizar
 * **spectral/**: Directorio que contiene todo lo relacionado con la herramienta spectral
-  * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
+  * **rules/**: Subdirectorio que contiene los ficheros de reglas a utilizar
+    * Este directorio contendrá la regla definida en el tutorial
+
+Se va hacer uso del fichero ".spectral.yml" como fichero de Ruleset utilizado
 
 
 
@@ -100,7 +105,16 @@ N/A
 >
 >Todos los ejemplos harán uso de la configuración de spectral de **.spectral.yml**
 
-### Ejecutar un análisis de un fichero
+```bash
+extends:
+- spectral:oas
+- ./spectral/rules/open-api-version-3.yaml
+rules: {}
+```
+
+
+
+### Ejecutar un lintado de un fichero válido
 
 Pasos a seguir:
 
@@ -112,8 +126,25 @@ Pasos a seguir:
 spectral lint ./examples/oas3-test.yaml
 ```
 
+No se mostrará ningun incumplimeinto de la regla
 
-### Ejecutar un análisis de todos los ficheros
+
+### Ejecutar un lintado de un fichero inválido
+
+Pasos a seguir:
+
+1. Arrancar un terminal
+2. Localizar el PATH del proyecto
+3. Ejecutar el siguiente comando
+
+```bash
+spectral lint ./examples/oas3-test-error-version.yaml
+```
+
+Sí se mostrará ningun incumplimeinto de la regla
+
+
+### Ejecutar un lintado de todos los ficheros
 
 Pasos a seguir:
 
