@@ -18,7 +18,8 @@
   - [Ejecutar un lintado desde el fichero .spectral.yml "autocontenido"](#ejecutar-un-lintado-desde-el-fichero-spectralyml-autocontenido)
   - [Ejecutar un lintado desde el fichero .spectral.yml "refenciada"](#ejecutar-un-lintado-desde-el-fichero-spectralyml-refenciada)
   - [Ejecutar un lintado desde el fichero acme\_api\_ruleset.v1.spectral.yaml](#ejecutar-un-lintado-desde-el-fichero-acme_api_rulesetv1spectralyaml)
-  - [Ejecutar un lintado desde una URL](#ejecutar-un-lintado-desde-una-url)
+  - [Ejecutar un lintado desde una URL con referencias locales](#ejecutar-un-lintado-desde-una-url-con-referencias-locales)
+  - [Ejecutar un lintado desde una URL con referencias de URL autocontenida](#ejecutar-un-lintado-desde-una-url-con-referencias-de-url-autocontenida)
 - [Autor](#autor)
 
 
@@ -108,7 +109,7 @@ Si el enfoque de la implementación de fichero es "autocontenida" significa que:
 * El fichero tiene todo lo necesario para funcionar desde un único fichero
 * No contendrá referencias a ficheros locales de reglas
 
-Se hará uso del contenido del fichero **".spectral.auto.yml"**
+Se hará uso del contenido del fichero **".spectral.auto.yml"** pero sobre el fichero **".spectral.yml"**
 
 ```bash
 extends:
@@ -155,7 +156,7 @@ Si el enfoque de la implementación de fichero es "autocontenida" significa que:
 
 * Tiene referencia a elementos que deberían de ser locales o bien otros enlaces
 
-Se hará uso del contenido del fichero **".spectral.refer.yml"**
+Se hará uso del contenido del fichero **".spectral.refer.yml"** pero sobre el fichero **".spectral.yml"**
 
 ```bash
 extends:
@@ -175,10 +176,10 @@ Referenciará a una regla custom defina de forma local
 
 En ese caso se desactivará la regla "operation-tag"
 
-Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"spectral/rulesets/acme_api_ruleset.v1.spectral.yaml"**
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **".spectral.yml"**
 
 ```bash
-spectral lint examples/oas3-test-error-version.yaml --ruleset spectral/rulesets/acme_api_ruleset.v1.spectral.yaml
+spectral lint examples/oas3-test-error-version.yaml
 ```
 
 Se mostrarán los resultados del lintado :
@@ -216,22 +217,27 @@ Referenciará a una regla custom defina de forma local
 
 En ese caso se desactivará la regla "operation-tag"
 
-Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **".spectral.yml"**
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"spectral/rulesets/acme_api_ruleset.v1.spectral.yaml"**
 
 ```bash
-spectral lint examples/oas3-test-error-version.yaml
+spectral lint examples/oas3-test-error-version.yaml --ruleset spectral/rulesets/acme_api_ruleset.v1.spectral.yaml
 ```
 
+Se mostrarán los resultados del lintado :
+
+* Incumplimiento de 1 regla con severidad "warning"
+* Incumplimiento de 1 regla con severidad "error" de la regla : open-api-version-3
 
 
 
 
-### Ejecutar un lintado desde una URL
+
+### Ejecutar un lintado desde una URL con referencias locales
 
 El fichero de reglas **"acme_ruleset.v1.spectral.yaml"**  se define en la URL :
 
 ```bash
-https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_ruleset.v1.spectral.yaml
+https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_api_ruleset.v1.spectral.yaml
 ```
 
 Este fichero contiene :
@@ -252,16 +258,64 @@ Refernciará a una regla custom defina de forma local
 
 En ese caso se desactivará la regla "operation-tag"
 
-Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test.yaml"** con la configuración de reglas **"spectral/rulesets/acme_ruleset.v1.spectral.yaml"**
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"desde su URL"**
 
 ```bash
-spectral lint examples/oas3-test.yaml --ruleset https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_ruleset.v1.spectral.yaml
+spectral lint examples/oas3-test-error-version.yaml --ruleset https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_api_ruleset.v1.spectral.yaml
 ```
 
 Se mostrarán los resultados del lintado :
 
-* Incumplimiento de 3 reglas con severidad "warning"
+* Incumplimiento de 1 regla con severidad "warning"
+* Incumplimiento de 1 regla con severidad "error" de la regla : open-api-version-3
 
+
+
+
+
+### Ejecutar un lintado desde una URL con referencias de URL autocontenida
+
+El fichero de reglas **"acme_ruleset.v2.spectral.yaml"**  se define en la URL :
+
+```bash
+https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_api_ruleset.v2.spectral.yaml
+```
+
+Este fichero contiene :
+
+```bash
+extends:
+  - spectral:oas
+  - spectral:asyncapi
+rules:
+  operation-tags: off
+  info-contact: off
+  open-api-version-3:
+        description: APIs should support OpenAPI V3
+        given: $.openapi
+        severity: error
+        then:
+            function: pattern
+            functionOptions:
+                match: '^3'
+```
+
+Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spectral, hay que recordar que cada regla tiene su propia configuración por defecto como puede ser la severidad.
+
+Refernciará a una regla custom defina desde una URL
+
+En ese caso se desactivará la regla "operation-tag"
+
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"desde su URL"**
+
+```bash
+spectral lint examples/oas3-test-error-version.yaml --ruleset https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_api_ruleset.v2.spectral.yaml
+```
+
+Se mostrarán los resultados del lintado :
+
+* Incumplimiento de 1 regla con severidad "warning"
+* Incumplimiento de 1 regla con severidad "error" de la regla : open-api-version-3
 
 
 
