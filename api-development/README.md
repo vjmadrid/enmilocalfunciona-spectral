@@ -98,7 +98,7 @@ N/A
 ### Ejecutar un lintado de un API OAS v3 definido en YAML
 
 
-El fichero de reglas **"acme_ruleset.v1.spectral.yaml"** contiene :
+El fichero de reglas **"acme_api_ruleset.v1.spectral.yaml"** contiene :
 
 ```bash
 extends:
@@ -114,10 +114,10 @@ Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spect
 
 En ese caso se desactivará la regla "operation-tag"
 
-Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test.yaml"** con la configuración de reglas **"spectral/rulesets/acme_ruleset.v1.spectral.yaml"**
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test.yaml"** con la configuración de reglas **"spectral/rulesets/acme_api_ruleset.v1.spectral.yaml"**
 
 ```bash
-spectral lint --ruleset spectral/rulesets/acme_ruleset.v1.spectral.yaml examples/oas3-test.yaml
+spectral lint --ruleset spectral/rulesets/acme_api_ruleset.v1.spectral.yaml examples/oas3-test.yaml
 ```
 
 Se mostrarán los resultados del lintado :

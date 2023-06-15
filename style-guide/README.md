@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 3)</h1>
+<h1>Spectral (Parte 4): Guía de Estilo</h1>
 
 
 
@@ -15,8 +15,10 @@
 - [Instalación](#instalación)
 - [Configuración](#configuración)
 - [Uso](#uso)
-  - [Ejecutar un análisis de un fichero](#ejecutar-un-análisis-de-un-fichero)
-  - [Ejecutar un análisis de todos los ficheros](#ejecutar-un-análisis-de-todos-los-ficheros)
+  - [Ejecutar un lintado desde el fichero .spectral.yml "autocontenido"](#ejecutar-un-lintado-desde-el-fichero-spectralyml-autocontenido)
+  - [Ejecutar un lintado desde el fichero .spectral.yml "refenciada"](#ejecutar-un-lintado-desde-el-fichero-spectralyml-refenciada)
+  - [Ejecutar un lintado desde el fichero acme\_api\_ruleset.v1.spectral.yaml](#ejecutar-un-lintado-desde-el-fichero-acme_api_rulesetv1spectralyaml)
+  - [Ejecutar un lintado desde una URL](#ejecutar-un-lintado-desde-una-url)
 - [Autor](#autor)
 
 
@@ -25,10 +27,10 @@
 
 ## Descripción
 
-En este parte del repositorio se va a enseñar a como implementar una regla customizada
+En este parte del repositorio se va a enseñar a como plantear una guía de estilo centralizada de diferentes maneras : dentro de un arquetipo, carga local de ficheros, uso en librerías de arquitecturas, uso mediante URL, etc.
 
 
-Nos encontramos en el directorio **"custom-rule/"**
+Nos encontramos en el directorio **"style-guide/"**
 
 Este directorio se compone de:
 
@@ -96,34 +98,169 @@ N/A
 
 ## Uso
 
->**Nota:**
->
->Todos los ejemplos harán uso de la configuración de spectral de **.spectral.yml**
 
-### Ejecutar un análisis de un fichero
+### Ejecutar un lintado desde el fichero .spectral.yml "autocontenido"
 
-Pasos a seguir:
+El fichero de reglas **".spectral.yml"** se define sobre el repositorio y podría venir dado por el arquetipo de proyecto utilizado
 
-1. Arrancar un terminal
-2. Localizar el PATH del proyecto
-3. Ejecutar el siguiente comando
+Si el enfoque de la implementación de fichero es "autocontenida" significa que:
+
+* El fichero tiene todo lo necesario para funcionar desde un único fichero
+* No contendrá referencias a ficheros locales de reglas
+
+Se hará uso del contenido del fichero **".spectral.auto.yml"**
 
 ```bash
-spectral lint ./examples/example1.yaml
+extends:
+  - spectral:oas
+  - spectral:asyncapi
+rules:
+  operation-tags: off
+  info-contact: off
+  open-api-version-3:
+        description: APIs should support OpenAPI V3
+        given: $.openapi
+        severity: error
+        then:
+            function: pattern
+            functionOptions:
+                match: '^3'
+```
+
+Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spectral, hay que recordar que cada regla tiene su propia configuración por defecto como puede ser la severidad.
+
+Referenciará a una regla custom defina ad-hoc
+
+En ese caso se desactivará la regla "operation-tag"
+
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **".spectral.yml"**
+
+```bash
+spectral lint examples/oas3-test-error-version.yaml
+```
+
+Se mostrarán los resultados del lintado :
+
+* Incumplimiento de 1 regla con severidad "warning"
+* Incumplimiento de 1 regla con severidad "error" de la regla : open-api-version-3
+
+
+
+
+### Ejecutar un lintado desde el fichero .spectral.yml "refenciada"
+
+El fichero de reglas **".spectral.yml"** se define sobre el repositorio y podría venir dado por el arquetipo de proyecto utilizado
+
+Si el enfoque de la implementación de fichero es "autocontenida" significa que:
+
+* Tiene referencia a elementos que deberían de ser locales o bien otros enlaces
+
+Se hará uso del contenido del fichero **".spectral.refer.yml"**
+
+```bash
+extends:
+  - spectral:oas
+  - spectral:asyncapi
+  - ./spectral/rulesets/rules/open-api-version-3.yaml
+rules:
+  operation-tags: off
+  info-contact: off
+```
+
+Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spectral, hay que recordar que cada regla tiene su propia configuración por defecto como puede ser la severidad.
+
+Referenciará a una regla custom defina de forma local
+
+* Cuidado con la localización relativa del fichero
+
+En ese caso se desactivará la regla "operation-tag"
+
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"spectral/rulesets/acme_api_ruleset.v1.spectral.yaml"**
+
+```bash
+spectral lint examples/oas3-test-error-version.yaml --ruleset spectral/rulesets/acme_api_ruleset.v1.spectral.yaml
+```
+
+Se mostrarán los resultados del lintado :
+
+* Incumplimiento de 1 regla con severidad "warning"
+* Incumplimiento de 1 regla con severidad "error" de la regla : open-api-version-3
+
+
+
+
+
+### Ejecutar un lintado desde el fichero acme_api_ruleset.v1.spectral.yaml
+
+El fichero de reglas **"acme_api_ruleset.v1.spectral.yaml"** se define sobre el repositorio y podría venir dado por el arquetipo de proyecto utilizado en un directorio de configuración
+
+El enfoque de este fichero puede ser : autocontenido o referenciado
+
+Para este ejemplo se hará uso del contenido del fichero **".spectral.refer.yml"**
+
+```bash
+extends:
+  - spectral:oas
+  - spectral:asyncapi
+  - ./spectral/rulesets/rules/open-api-version-3.yaml
+rules:
+  operation-tags: off
+  info-contact: off
+```
+
+Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spectral, hay que recordar que cada regla tiene su propia configuración por defecto como puede ser la severidad.
+
+Referenciará a una regla custom defina de forma local
+
+* Cuidado con la localización relativa del fichero
+
+En ese caso se desactivará la regla "operation-tag"
+
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **".spectral.yml"**
+
+```bash
+spectral lint examples/oas3-test-error-version.yaml
 ```
 
 
-### Ejecutar un análisis de todos los ficheros
 
-Pasos a seguir:
 
-1. Arrancar un terminal
-2. Localizar el PATH del proyecto
-3. Ejecutar el siguiente comando
+
+### Ejecutar un lintado desde una URL
+
+El fichero de reglas **"acme_ruleset.v1.spectral.yaml"**  se define en la URL :
 
 ```bash
-spectral lint ./examples/*
+https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_ruleset.v1.spectral.yaml
 ```
+
+Este fichero contiene :
+
+```bash
+extends:
+  - spectral:oas
+  - spectral:asyncapi
+  - ./rules/open-api-version-3.yaml
+rules:
+  operation-tags: off
+  info-contact: off
+```
+
+Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spectral, hay que recordar que cada regla tiene su propia configuración por defecto como puede ser la severidad.
+
+Refernciará a una regla custom defina de forma local
+
+En ese caso se desactivará la regla "operation-tag"
+
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test.yaml"** con la configuración de reglas **"spectral/rulesets/acme_ruleset.v1.spectral.yaml"**
+
+```bash
+spectral lint examples/oas3-test.yaml --ruleset https://raw.githubusercontent.com/vjmadrid/enmilocalfunciona-spectral/main/style-guide/spectral/rulesets/acme_ruleset.v1.spectral.yaml
+```
+
+Se mostrarán los resultados del lintado :
+
+* Incumplimiento de 3 reglas con severidad "warning"
 
 
 

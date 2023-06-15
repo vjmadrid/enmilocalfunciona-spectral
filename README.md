@@ -29,7 +29,7 @@ Este repositorio se encarga de servir como una estructura de los recursos utiliz
   * Su directorio de trabajo es **"custom-rule/"**
 * [Primeros pasos con Spectral (Parte 3) : Desarrollando APIs](xxx) : Artículo que enseñará a como enfocar Spectral al desarrollo de APIs
   * Su directorio de trabajo es **"api-development/"**
-* [Primeros pasos con Spectral (Parte 4) : Guía de Estilo](xxx) : Artículo que enseñará a como plantear una guía de estilo centralizada
+* [Primeros pasos con Spectral (Parte 4) : Guía de Estilo](xxx) : Artículo que enseñará a como plantear una guía de estilo centralizada de diferentes maneras : dentro de un arquetipo, carga local de ficheros, uso en librerías de arquitecturas, uso mediante URL, etc.
   * Su directorio de trabajo es **"style-guide/"**
 
 

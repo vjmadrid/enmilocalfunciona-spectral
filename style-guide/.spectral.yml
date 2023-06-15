@@ -1,0 +1,7 @@
+extends:
+  - spectral:oas
+  - spectral:asyncapi
+  - ./spectral/rulesets/rules/open-api-version-3.yaml
+rules:
+  operation-tags: off
+  info-contact: off
