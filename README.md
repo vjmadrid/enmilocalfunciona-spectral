@@ -23,14 +23,16 @@
 
 Este repositorio se encarga de servir como una estructura de los recursos utilizados para los artículos publicados en la plataforma **enmilocalfunciona.io** relacionados con el uso de **Spectral** y basado en la serie de artículos **“Primeros pasos con Spectral”**
 
-* [Primeros pasos con Spectral (Parte 1)](xxx) :  Artículo de introducción a Spectral que hace uso de diferentes ejemplos
+* [Primeros pasos con Spectral (Parte 1)](xxx) : Artículo de introducción a la herramienta Spectral que hace uso de diferentes ejemplos y que explica diferentes enfoques de diseño.
   * Su directorio de trabajo es **"basic/"**
-* [Primeros pasos con Spectral (Parte 2) : Implementar una Regla Custom](xxx) :  Artículo que enseñará a como crear una regla customizada y usarla
+* [Primeros pasos con Spectral (Parte 2) : Implementar una Regla Custom](xxx) : Artículo que enseñará la forma de crear una regla customizada y usarla mediante una propuesta de procedimiento.
   * Su directorio de trabajo es **"custom-rule/"**
-* [Primeros pasos con Spectral (Parte 3)](xxx) :  Artículo que enseñará a como crear una guía de estilo corporativa
+* [Primeros pasos con Spectral (Parte 3) : Desarrollando APIs](xxx) : Artículo que enseñará a como enfocar Spectral al desarrollo de APIs
+  * Su directorio de trabajo es **"api-development/"**
+* [Primeros pasos con Spectral (Parte 4) : Guía de Estilo](xxx) : Artículo que enseñará a como plantear una guía de estilo centralizada
   * Su directorio de trabajo es **"style-guide/"**
-* [Primeros pasos con Spectral (Parte 4)](xxx) :  Artículo que enseñará a como crear un proyecto de Node que haga uso de spectral
-  * Su directorio de trabajo es **"spectral-project/"**
+
+
 
 
 

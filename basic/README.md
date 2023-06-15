@@ -47,7 +47,7 @@ Este directorio se compone del directorio **"api/"** que es el lugar donde se ub
 
 >**Importante**
 >
->Hay que tener en cuenta que en los escenarios tratados se hará usso de los enfoques explicados en el artículo teórico
+>Hay que tener en cuenta que en los escenarios tratados se hará uso de enfoques de diseño explicados en el artículo teórico
 
 
 
