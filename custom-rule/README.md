@@ -26,7 +26,7 @@
 
 ## Descripción
 
-En este parte del repositorio se va a enseñar a comocrear una regla customizada y usarla mediante una propuesta de procedimiento.
+En este parte del repositorio se va a enseñar a como crear una regla customizada y usarla mediante una propuesta de procedimiento.
 
 El procedimiento de creación de la regla se definirá en el artículo
 
