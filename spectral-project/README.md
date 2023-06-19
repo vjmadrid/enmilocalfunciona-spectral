@@ -13,6 +13,7 @@
   - [Dependencias de terceros](#dependencias-de-terceros)
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
+  - [Crear un proyecto desde 0](#crear-un-proyecto-desde-0)
   - [Instalar dependencias](#instalar-dependencias)
 - [Configuración](#configuración)
   - [Implementar comando de análisis de un fichero](#implementar-comando-de-análisis-de-un-fichero)
@@ -86,7 +87,7 @@ N/A
 
 ## Instalación
 
-### Crear un proyecto
+### Crear un proyecto desde 0
 
 Pasos a seguir
 

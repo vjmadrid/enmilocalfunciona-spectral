@@ -13,6 +13,7 @@
   - [Dependencias de terceros](#dependencias-de-terceros)
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
+  - [Crear un proyecto](#crear-un-proyecto)
   - [Instalar dependencias](#instalar-dependencias)
 - [Configuración](#configuración)
   - [Implementar comando de análisis de todos los ejemplos](#implementar-comando-de-análisis-de-todos-los-ejemplos)
@@ -88,7 +89,7 @@ N/A
 
 ## Instalación
 
-### Crear un proyecto
+### Crear un proyecto
 
 Pasos a seguir
 

@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*"
+    "oas:lint": "spectral lint -F warn ./examples/*",
+    "prepare:husky": "husky install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@stoplight/spectral-core": "^1.18.0",
     "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "npm run oas:lint"
+    }
   }
 }

@@ -13,6 +13,8 @@
   - [Dependencias de terceros](#dependencias-de-terceros)
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
+  - [Instalar Spectral CLI Client](#instalar-spectral-cli-client)
+  - [Spectral Javascript API](#spectral-javascript-api)
 - [Configuración](#configuración)
 - [Uso](#uso)
   - [Escenario 1: Ejecutar comando "out-of-the-box](#escenario-1-ejecutar-comando-out-of-the-box)
@@ -92,7 +94,7 @@ N/A
 ## Instalación
 
 
-### Instalar Spectral CLI Client
+### Instalar Spectral CLI Client
 
 >**Importante**
 >
@@ -114,7 +116,7 @@ spectral --version
 ```
 
 
-### Spectral Javascript API
+### Spectral Javascript API
 
 Pasos a seguir
 
