@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf package-lock.json && npm install",
+    "node:version": "echo 'nodejs version: ' && node -v ",
     "oas:lint:one": "spectral lint ./examples/example1.yaml",
     "oas:lint": "spectral lint ./examples/*"
   },
