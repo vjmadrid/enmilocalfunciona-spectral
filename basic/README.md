@@ -14,7 +14,6 @@
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
   - [Instalar Spectral CLI Client](#instalar-spectral-cli-client)
-  - [Spectral Javascript API](#spectral-javascript-api)
 - [Configuración](#configuración)
 - [Uso](#uso)
   - [Escenario 1: Ejecutar comando "out-of-the-box](#escenario-1-ejecutar-comando-out-of-the-box)
@@ -35,21 +34,21 @@
 
 ## Descripción
 
-En este sección de la serie de artículos se va a **enseñar** a **utilizar** la **herramienta por línea de comando** (tipo CLI) con diferentes **escenarios**, de esta forma se verán todas las cosas que se pueden hacer
+En este artículo se va a **enseñar** a **utilizar** la **herramienta por línea de comando** (tipo CLI) con diferentes **escenarios** definidos, de esta forma se verán todas las cosas que se pueden hacer con esta herramienta.
 
 Nos encontramos en el directorio **"basic/"**
 
-Este directorio se compone del directorio **"api/"** que es el lugar donde se ubicarán los ejemplos de reglas y los ejemplos de ficheros a analizar
+Este directorio se compone del directorio **"api/"** que es el lugar donde se ubicarán los ejemplos de reglas de Spectral y los ficheros de ejemplos a analizar
 
-* **examples/**: Directtorio que contiene los ficheros a analizar
-* **rulesets/**: Directtorio que contiene los ficheros de reglas definidos
+* **examples/**: Directorio que contiene los ficheros a analizar
+* **rulesets/**: Directorio que contiene los ficheros de reglas definidos y que se utilizarán
   * **rules/**: Subdirectorio que contiene las reglas declaradas de forma independiente
-  * **functions/**: Subdirectorio que contiene al implementación de la validación de una regla
+  * **functions/**: Subdirectorio que contiene la implementación de la validación de una regla
 
 
 >**Importante**
 >
->Hay que tener en cuenta que en los escenarios tratados se hará uso de enfoques de diseño explicados en el artículo teórico
+>Hay que tener en cuenta que en los escenarios tratados se harán uso de enfoques de diseño explicados en su [artículo](xxx) asociado
 
 
 
@@ -57,13 +56,14 @@ Este directorio se compone del directorio **"api/"** que es el lugar donde se ub
 
 ## Estado
 
-Este proyecto se encuentra en construcción
+Este proyecto se encuentra en versión: 1.0.0
 
 
 
 
 
 ## Stack Tecnológico
+
 
 ### General
 
@@ -98,35 +98,24 @@ N/A
 
 >**Importante**
 >
->[Spectral CLI Client](https://meta.stoplight.io/docs/spectral/9ffa04e052cc1-spectral-cli) es un módulo de Node.js y una de las mejores formas de utilizarlo de forma sencilla es tenerlo instaldo de forma global
+>[Spectral CLI Client](https://meta.stoplight.io/docs/spectral/9ffa04e052cc1-spectral-cli) es un módulo de Node.js, que permite ser ejecutado desde línea de comandos. Una de las mejores formas de utilizarlo es tenerlo instalado de forma global en Node.js y así estará disponible para todos los proyectos que usen esa versión
 
 Pasos a seguir
 
 1. Arrancar un terminal
-2. Ejecutar el siguiente comando:
-
-```bash
-npm install -g @stoplight/spectral-cli
-```
-
-3. Verificar que se ha instaldo correctamente ejecutando el siguiente comando
-
-```bash
-spectral --version
-```
-
-
-### Spectral Javascript API
-
-Pasos a seguir
-
-1. Arrancar un terminal
-2. Ejecutar el siguiente comando:
+2. Ejecutar el siguiente comando
 
 ```bash
 npm install -g @stoplight/spectral-core
 ```
 
+3. Verificar que se ha instalado correctamente ejecutando el siguiente comando
+
+```bash
+spectral --version
+```
+
+Se debería de mostrar la versión de "Spectral" que se ha instalado
 
 
 
@@ -138,9 +127,11 @@ N/A
 
 
 
+
+
 ## Uso
 
-En este apartado se van a detallar una serie de escenarios de trabajo
+En este apartado se van a detallar una **serie de ejemplos** de uso sobre **diferentes escenarios** de trabajo
 
 Para su ejecución se requiere
 
@@ -148,7 +139,7 @@ Para su ejecución se requiere
 2. Localizar el PATH de instalación (el lugar donde se encuentra el proyecto)
 3. Localizar el directorio "basic/"
 
-A partir de esa localización los comandos deberían de funcionar sin problemas
+A partir de esa localización los escenarios deberían de funcionar sin problemas
 
 
 
@@ -165,7 +156,7 @@ Contexto :
 * No tiene definido el parámetro de incluir ningún conjunto de reglas
 * El fichero ".spectral.yaml" (por defecto) no se encuentra definido en la ubicación del proyecto
 
-Como resultado se mostrara un mensaje de error : **"No ruleset has been found. Please provide a ruleset using the --ruleset CLI argument, or make sure your ruleset file matches .?spectral.(js|ya?ml|json)%"**
+Como resultado se mostrará un mensaje de error : **"No ruleset has been found. Please provide a ruleset using the --ruleset CLI argument, or make sure your ruleset file matches .?spectral.(js|ya?ml|json)%"**
 
 Se puede crear el fichero ".spectral.yaml" sobre el directorio del proyecto con el siguiente contenido:
 
@@ -199,7 +190,6 @@ Se mostrarán los resultados del lintado :
 
 * Incumplimiento de 5 reglas con severidad "warning"
 
-
 Se podrá establecer un parámetro "-F" para Spectral de un error cuando se encuentre un incumplimiento de la regla con valor "warn"
 
 ```bash
@@ -221,7 +211,6 @@ extends: [[spectral:oas, all]]
 Cargará el conjunto de reglas para OAS definido por defecto por Spectral, donde cada regla tiene su propia configuración por defecto como puede ser la severidad
 
 Con el valor "all" se harán uso de todas las reglas incluso las desactivadas
-
 
 Se ejecutará una operación de lintado sobre el fichero **"api/examples/oas3-test.yaml"** con la configuración de reglas **"api/rulesets/test3_ruleset.spectral.yaml"**
 

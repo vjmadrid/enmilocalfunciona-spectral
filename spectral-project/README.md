@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 3)</h1>
+<h1>Primeros pasos con Spectral (Parte 5) : Proyecto Node.js</h1>
 
 
 
@@ -29,7 +29,7 @@
 
 ## Descripción
 
-En este parte del repositorio se va a enseñar a como implementar una regla customizada
+En este parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permite desarrollar un contraro de API Web sobre OAS3 y que ademas incorpore el lintado con Spectral
 
 
 Nos encontramos en el directorio **"spectral-project/"**
