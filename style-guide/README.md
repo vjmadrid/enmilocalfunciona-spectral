@@ -202,7 +202,9 @@ Recordar verificar qe no debería de existir el fichero por defecto ".spectral.y
 
 El enfoque de este fichero puede ser : autocontenido o referenciado
 
-Para este ejemplo se hará uso del contenido del fichero **"acme_api_ruleset.v1.spectral.yaml"**
+* Como lo que se ha explicado antes
+
+Para este ejemplo se hará uso del contenido del fichero **"acme_api_ruleset.v1.refer.spectral.yaml"**
 
 ```bash
 extends:
@@ -222,10 +224,10 @@ Referenciará a una regla custom defina de forma local
 
 En ese caso, se desactivarán las reglas "operation-tag" y "info-contact"
 
-Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"spectral/rulesets/acme_api_ruleset.v1.spectral.yaml"**
+Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"spectral/rulesets/acme_api_ruleset.v1.refer.spectral.yaml"**
 
 ```bash
-spectral lint examples/oas3-test-error-version.yaml --ruleset spectral/rulesets/acme_api_ruleset.v1.spectral.yaml
+spectral lint examples/oas3-test-error-version.yaml --ruleset spectral/rulesets/acme_api_ruleset.v1.refer.spectral.yaml
 ```
 
 Se mostrarán los resultados del lintado :
