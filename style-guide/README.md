@@ -132,7 +132,7 @@ Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spect
 
 Referenciará a una regla custom defina ad-hoc
 
-En ese caso se desactivará la regla "operation-tag"
+En ese caso, se desactivarán las reglas "operation-tag" y "info-contact"
 
 Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **".spectral.yml"**
 
@@ -156,6 +156,9 @@ Si el enfoque de la implementación de fichero es "autocontenida" significa que:
 
 * Tiene referencia a elementos que deberían de ser locales o bien otros enlaces
 
+Por lo que es importante, confirmar que las reglas custom también viajan en el proyecto o bien el arquetipo
+
+
 Se hará uso del contenido del fichero **".spectral.refer.yml"** pero sobre el fichero **".spectral.yml"**
 
 ```bash
@@ -172,9 +175,9 @@ Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spect
 
 Referenciará a una regla custom defina de forma local
 
-* Cuidado con la localización relativa del fichero
+* Cuidado con la localización relativa del fichero de la regla custom
 
-En ese caso se desactivará la regla "operation-tag"
+En ese caso, se desactivarán las reglas "operation-tag" y "info-contact"
 
 Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **".spectral.yml"**
 
@@ -195,15 +198,17 @@ Se mostrarán los resultados del lintado :
 
 El fichero de reglas **"acme_api_ruleset.v1.spectral.yaml"** se define sobre el repositorio y podría venir dado por el arquetipo de proyecto utilizado en un directorio de configuración
 
+Recordar verificar qe no debería de existir el fichero por defecto ".spectral.yml"
+
 El enfoque de este fichero puede ser : autocontenido o referenciado
 
-Para este ejemplo se hará uso del contenido del fichero **".spectral.refer.yml"**
+Para este ejemplo se hará uso del contenido del fichero **"acme_api_ruleset.v1.spectral.yaml"**
 
 ```bash
 extends:
   - spectral:oas
   - spectral:asyncapi
-  - ./spectral/rulesets/rules/open-api-version-3.yaml
+  - ./rules/open-api-version-3.yaml
 rules:
   operation-tags: off
   info-contact: off
@@ -215,7 +220,7 @@ Referenciará a una regla custom defina de forma local
 
 * Cuidado con la localización relativa del fichero
 
-En ese caso se desactivará la regla "operation-tag"
+En ese caso, se desactivarán las reglas "operation-tag" y "info-contact"
 
 Se ejecutará una operación de lintado sobre el fichero **"examples/oas3-test-error-version.yaml"** con la configuración de reglas **"spectral/rulesets/acme_api_ruleset.v1.spectral.yaml"**
 
