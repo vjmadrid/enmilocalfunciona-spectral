@@ -21,16 +21,21 @@
 
 ## Descripción
 
-Este repositorio se encarga de servir como una estructura de los recursos utilizados para los artículos publicados en la plataforma **enmilocalfunciona.io** relacionados con el uso de **Spectral** y basado en la serie de artículos **“Primeros pasos con Spectral”**
+Este **repositorio** se encarga de servir como una **estructura** de los **recursos utilizados** para los **artículos publicados** en la plataforma **enmilocalfunciona.io** relacionados con el uso de **Spectral** y basado en la serie de artículos **“Primeros pasos con Spectral”**
 
-* [Primeros pasos con Spectral (Parte 1)](xxx) : Artículo de introducción a la herramienta Spectral que hace uso de diferentes ejemplos y que explica diferentes enfoques de diseño.
+* [Primeros pasos con Spectral (Parte 1)](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral): Artículo de introducción a la herramienta Spectral que hace uso de diferentes ejemplos y que explica diferentes enfoques de diseño.
   * Su directorio de trabajo es **"basic/"**
-* [Primeros pasos con Spectral (Parte 2) : Implementar una Regla Custom](xxx) : Artículo que enseñará la forma de crear una regla customizada y usarla mediante una propuesta de procedimiento.
+
+En construcción:
+
+* [Primeros pasos con Spectral (Parte 2) : Implementar una Regla Custom](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-2-implementar-una-regla-custom/): Artículo que enseñará la forma de crear una regla customizada y usarla mediante una propuesta de procedimiento.
   * Su directorio de trabajo es **"custom-rule/"**
-* [Primeros pasos con Spectral (Parte 3) : Desarrollando APIs](xxx) : Artículo que enseñará a como enfocar Spectral al desarrollo de APIs.
+* [Primeros pasos con Spectral (Parte 3) : Desarrollando APIs](xxx): Artículo que enseñará a como enfocar Spectral al desarrollo de APIs.
   * Su directorio de trabajo es **"api-development/"**
-* [Primeros pasos con Spectral (Parte 4) : Guía de Estilo](xxx) : Artículo que enseñará a como plantear una guía de estilo centralizada de diferentes maneras : dentro de un arquetipo, carga local de ficheros, uso en librerías de arquitecturas, uso mediante URL, etc.
+* [Primeros pasos con Spectral (Parte 4) : Guía de Estilo](xxx): Artículo que enseñará a como plantear una guía de estilo centralizada de diferentes maneras : dentro de un arquetipo, carga local de ficheros, uso en librerías de arquitecturas, uso mediante URL, etc.
   * Su directorio de trabajo es **"style-guide/"**
+* [Primeros pasos con Spectral (Parte 5) : Proyecto Node.js](xxx): xxx
+  * Su directorio de trabajo es **"spectral-project/"**
 
 
 

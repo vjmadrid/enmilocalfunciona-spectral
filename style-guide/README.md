@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 4): Guía de Estilo</h1>
+<h1>Spectral (Parte 4): Guía de Estilo de APIs</h1>
 
 
 
