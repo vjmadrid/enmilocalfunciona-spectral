@@ -126,7 +126,7 @@ Pasos a seguir:
 spectral lint ./examples/oas3-test.yaml
 ```
 
-No se mostrará ningun incumplimeinto de la regla
+No se mostrará ningun incumplimiento de la regla
 
 
 ### Ejecutar un lintado de un fichero inválido
@@ -141,7 +141,7 @@ Pasos a seguir:
 spectral lint ./examples/oas3-test-error-version.yaml
 ```
 
-Sí se mostrará ningun incumplimeinto de la regla
+Sí se mostrará ningun incumplimiento de la regla
 
 
 ### Ejecutar un lintado de todos los ficheros
