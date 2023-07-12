@@ -184,7 +184,7 @@ rules:
         then:
             function: pattern
             functionOptions:
-                match: '^3'
+              match: '^3'
 ```
 
 Cargará el conjunto de reglas para OAS y AsynAPI definido por defecto por Spectral, hay que recordar que cada regla tiene su propia configuración por defecto como puede ser la severidad.

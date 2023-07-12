@@ -1,4 +1,0 @@
-extends:
-- spectral:oas
-- ./spectral/rules/open-api-version-3.yaml
-rules: {}
