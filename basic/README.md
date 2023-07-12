@@ -34,21 +34,21 @@
 
 ## Descripción
 
-En este artículo se va a **enseñar** a **utilizar** la **herramienta por línea de comando** (tipo CLI) con diferentes **escenarios** definidos, de esta forma se verán todas las cosas que se pueden hacer con esta herramienta.
+En este artículo se va a **enseñar** a **utilizar** la **herramienta por línea de comando** (tipo CLI) con diferentes **escenarios** definidos (cada uno con su propia casuística), de esta forma se verá al gran mayoría de las cosas que se pueden hacer con esta herramienta.
 
 Nos encontramos en el directorio **"basic/"**
 
-Este directorio se compone del directorio **"api/"** que es el lugar donde se ubicarán los ejemplos de reglas de Spectral y los ficheros de ejemplos a analizar
+Este directorio se compone del directorio **"api/"**, que es el lugar donde se ubicarán los ejemplos de reglas de Spectral y los ficheros de ejemplos a analizar
 
 * **examples/**: Directorio que contiene los ficheros a analizar
-* **rulesets/**: Directorio que contiene los ficheros de reglas definidos y que se utilizarán
+* **rulesets/**: Directorio que contiene los ficheros de reglas definidos que se utilizarán
   * **rules/**: Subdirectorio que contiene las reglas declaradas de forma independiente
   * **functions/**: Subdirectorio que contiene la implementación de la validación de una regla
 
 
 >**Importante**
 >
->Hay que tener en cuenta que en los escenarios tratados se harán uso de enfoques de diseño explicados en su [artículo](xxx) asociado
+>Hay que tener en cuenta que en los escenarios tratados se harán uso de enfoques de diseño explicados en su [artículo](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral)
 
 
 
@@ -98,7 +98,7 @@ N/A
 
 >**Importante**
 >
->[Spectral CLI Client](https://meta.stoplight.io/docs/spectral/9ffa04e052cc1-spectral-cli) es un módulo de Node.js, que permite ser ejecutado desde línea de comandos. Una de las mejores formas de utilizarlo es tenerlo instalado de forma global en Node.js y así estará disponible para todos los proyectos que usen esa versión
+>[Spectral CLI Client](https://meta.stoplight.io/docs/spectral/9ffa04e052cc1-spectral-cli) es un módulo de Node.js, que permite ser ejecutado desde línea de comandos. Una de las mejores formas de utilizarlo es tenerlo instalado de forma global en Node.js y así estará disponible para todos los proyectos que usen esa versión de Node.js
 
 Pasos a seguir
 
@@ -108,6 +108,8 @@ Pasos a seguir
 ```bash
 npm install -g @stoplight/spectral-core
 ```
+
+Se realizará la instalación de la dependencia de forma global
 
 3. Verificar que se ha instalado correctamente ejecutando el siguiente comando
 

@@ -7,11 +7,14 @@
     "oas:lint:one": "spectral lint ./examples/example1.yaml",
     "oas:lint": "spectral lint ./examples/*",
     "oas:lint-warning-as-errors": "spectral lint -F warn ./examples/example1.yaml",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "spectral:validate-rules": "cucumber-js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@stoplight/spectral-core": "^1.18.0"
+    "@cucumber/cucumber": "^9.2.0",
+    "@stoplight/spectral-core": "^1.18.0",
+    "chai": "^4.3.7"
   }
 }

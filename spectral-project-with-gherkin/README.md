@@ -57,12 +57,20 @@ N/A
 
 **Desarrollo**
 
-* **@stoplight/spectral** : Framework de Spectral
-  * [Repositorio](https://pypi.org/project/Flask/)
-  * [Repositorio Git](https://github.com/pallets/flask/)
-  * [Documentacion](https://flask.palletsprojects.com/en/2.1.x/)
-  * Incluye las siguientes dependencias : (opciones)
-    * Dependencia 1
+* **@stoplight/spectral-core** : Framework de Spectral
+  * [Repositorio](https://www.npmjs.com/package/@stoplight/spectral-core)
+  * [Repositorio Git](https://github.com/stoplightio/spectral)
+  * [Documentacion](https://github.com/stoplightio/spectral/blob/develop/README.md)
+* **@cucumber/cucumber** : Framework de automatizacion de tests en lenguaje planto
+  * [Repositorio](https://www.npmjs.com/package/@cucumber/cucumber)
+  * [Repositorio Git](https://github.com/cucumber/cucumber-js)
+  * [Documentacion](https://cucumber.io/)
+  * [Documentacion 2](https://cucumber.io/docs/cucumber/)
+* **chai** : Framework de assert para su uso con BDD/TDD
+  * [Repositorio](https://www.npmjs.com/package/chai)
+  * [Repositorio Git](https://github.com/chaijs/chai)
+  * [Documentacion](https://www.chaijs.com/)
+
 
 
 
