@@ -27,7 +27,7 @@
 
 ## Descripción
 
-En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contraro de API Web sobre OAS3 y que además incorpore el lintado con Spectral
+En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contrato de API Web sobre OAS3 y que además incorpore el lintado con Spectral
 
 Nos encontramos en el directorio **"spectral-project/"**
 
@@ -72,6 +72,10 @@ N/A
   * [npm](https://www.npmjs.com/package/@stoplight/spectral-core)
   * [Repositorio Git](https://github.com/stoplightio/spectral)
   * [Documentacion](https://stoplight.io/open-source/spectral)
+
+
+**Testing**
+
 * **jest** : Framework de Testing
   * [npm](https://www.npmjs.com/package/jest)
   * [Repositorio Git](https://github.com/jestjs/jest)
@@ -91,7 +95,7 @@ N/A
 
 ## Instalación
 
-Pasos a seguir
+Pasos a seguir:
 
 1. Clonar el repositorio
 2. Arrancar un terminal

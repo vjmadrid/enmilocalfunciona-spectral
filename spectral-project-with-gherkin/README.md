@@ -13,13 +13,10 @@
   - [Dependencias de terceros](#dependencias-de-terceros)
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
-  - [Instalar dependencias](#instalar-dependencias)
 - [Configuración](#configuración)
   - [Implementar comando de análisis de un fichero](#implementar-comando-de-análisis-de-un-fichero)
-  - [Implementar comando de análisis de todos los ejemplos](#implementar-comando-de-análisis-de-todos-los-ejemplos)
 - [Uso](#uso)
   - [Ejecutar un análisis de un fichero](#ejecutar-un-análisis-de-un-fichero)
-  - [Ejecutar un análisis de todos los ficheros](#ejecutar-un-análisis-de-todos-los-ficheros)
 - [Autor](#autor)
 
 
@@ -28,7 +25,19 @@
 
 ## Descripción
 
-En este parte del repositorio se va a enseñar a utilizar la herramienta por línea de comando con diferentes escenarios explicados, de esta forma se verán todas las cosas que se pueden hacer
+En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contrato de API Web sobre OAS3 y que además incorpore el lintado con Spectral
+
+Nos encontramos en el directorio **"spectral-project/"**
+
+Este directorio se compone de:
+
+* **examples/**: Directorio que contiene los ficheros a analizar
+* **config/**: Directorio que contiene la configuración del proyecto
+  * **spectral/**: Directorio que contiene todo lo relacionado con la herramienta spectral
+    * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
+* **src/**: Directorio que contiene código para una supuesta aplicación de calculadora
+  * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores ejemplos
+* **tests/**: Directorio que contiene test unitarios / integración sobre código implementado en el directorio "src/"
 
 
 
@@ -58,16 +67,24 @@ N/A
 **Desarrollo**
 
 * **@stoplight/spectral-core** : Framework de Spectral
-  * [Repositorio](https://www.npmjs.com/package/@stoplight/spectral-core)
+  * [npm](https://www.npmjs.com/package/@stoplight/spectral-core)
   * [Repositorio Git](https://github.com/stoplightio/spectral)
-  * [Documentacion](https://github.com/stoplightio/spectral/blob/develop/README.md)
+  * [Documentacion](https://stoplight.io/open-source/spectral)
+
+
+**Testing**
+
+* **jest** : Framework de Testing
+  * [npm](https://www.npmjs.com/package/jest)
+  * [Repositorio Git](https://github.com/jestjs/jest)
+  * [Documentacion](https://jestjs.io/)
 * **@cucumber/cucumber** : Framework de automatizacion de tests en lenguaje planto
-  * [Repositorio](https://www.npmjs.com/package/@cucumber/cucumber)
+  * [npm](https://www.npmjs.com/package/@cucumber/cucumber)
   * [Repositorio Git](https://github.com/cucumber/cucumber-js)
   * [Documentacion](https://cucumber.io/)
   * [Documentacion 2](https://cucumber.io/docs/cucumber/)
 * **chai** : Framework de assert para su uso con BDD/TDD
-  * [Repositorio](https://www.npmjs.com/package/chai)
+  * [npm](https://www.npmjs.com/package/chai)
   * [Repositorio Git](https://github.com/chaijs/chai)
   * [Documentacion](https://www.chaijs.com/)
 
@@ -85,32 +102,19 @@ N/A
 
 ## Instalación
 
-### Crear un proyecto
+Pasos a seguir:
 
-Pasos a seguir
-
-1. Crear un directorio de proyecto (Por ejemplo: custom-rule)
+1. Clonar el repositorio
 2. Arrancar un terminal
-3. Localizar el PATH el directorio anterior
+3. Localizar el PATH el directorio : **spectral-project-with-gherkin/**
 4. Ejecutar el siguiente comando
 
 ```bash
-npm init -y
+npm install
 ```
 
+5. Verificar que se ha instalado todo correctamente
 
-
-### Instalar dependencias
-
-Pasos a seguir:
-
-1. Arrancar un terminal
-2. Localizar el PATH del proyecto
-3. Ejecutar el siguiente comando
-
-```bash
-npm install --save-dev @stoplight/spectral-core
-```
 
 
 
@@ -121,30 +125,19 @@ npm install --save-dev @stoplight/spectral-core
 
 Pasos a seguir:
 
-1. Crear un script en el fichero **package.json**
+1. Editar la sección de scripts del fichero **package.json**
 
 ```bash
 "scripts": {
     ...
-    "oas:lint:one": "spectral lint ./examples/example1.yaml",
+    "spectral:validate-rules": "cucumber-js"
     ...
   },
 ```
 
+Detalle:
 
-### Implementar comando de análisis de todos los ejemplos
-
-Pasos a seguir:
-
-1. Crear un script en el fichero **package.json**
-
-```bash
-"scripts": {
-    ...
-    "oas:lint": "spectral lint ./examples/*",
-    ...
-  },
-```
+* **spectral:validate-rules**: Análisis de las reglas basadas en Gherkin
 
 
 
@@ -155,6 +148,7 @@ Pasos a seguir:
 >
 >Todos los ejemplos harán uso de la configuración de spectral de **.spectral.yml**
 
+
 ### Ejecutar un análisis de un fichero
 
 Pasos a seguir:
@@ -164,21 +158,10 @@ Pasos a seguir:
 3. Ejecutar el siguiente comando
 
 ```bash
-npm run oas:lint:one
+npm run spectral:validate-rules
 ```
 
 
-### Ejecutar un análisis de todos los ficheros
-
-Pasos a seguir:
-
-1. Arrancar un terminal
-2. Localizar el PATH del proyecto
-3. Ejecutar el siguiente comando
-
-```bash
-npm run oas:lint
-```
 
 
 

@@ -7,9 +7,9 @@
     "clean": "rm -rf package-lock.json && npm install",
     "node:version": "echo 'nodejs version: ' && node -v ",
     "test": "jest",
-    "oas:lint:one": "spectral lint ./examples/example1.yaml",
-    "oas:lint": "spectral lint ./examples/*",
-    "oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*",
+    "spectral:oas:lint:one": "spectral lint ./examples/example1.yaml",
+    "spectral:oas:lint": "spectral lint ./examples/*",
+    "spectral:oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*",
     "spectral:validate-rules": "cucumber-js"
   },
   "author": "",
