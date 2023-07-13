@@ -7,14 +7,14 @@
     "clean": "rm -rf package-lock.json && npm install",
     "node:version": "echo 'nodejs version: ' && node -v ",
     "test": "jest",
-    "oas:lint:one": "spectral lint ./examples/example1.yaml",
-    "oas:lint": "spectral lint ./examples/*",
-    "oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*"
+    "spectral:oas:lint:one": "spectral lint ./examples/example1.yaml",
+    "spectral:oas:lint": "spectral lint ./examples/*",
+    "spectral:oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@stoplight/spectral-core": "^1.18.0",
-    "jest": "^29.6.1",
+    "jest": "^29.6.1"
   }
 }

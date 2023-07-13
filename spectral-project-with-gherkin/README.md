@@ -1,4 +1,4 @@
-<h1>Spectral (Parte 3)</h1>
+<h1>Primeros pasos con Spectral (Parte 6): Proyecto Node.js con Gherkin</h1>
 
 
 

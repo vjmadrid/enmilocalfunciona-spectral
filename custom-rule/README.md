@@ -1,4 +1,4 @@
-<h1>Primeros pasos con Spectral (Parte 2) : Implementar una Regla Custom</h1>
+<h1>Primeros pasos con Spectral (Parte 2): Implementar una Regla Custom</h1>
 
 
 
@@ -26,7 +26,7 @@
 
 ## Descripción
 
-En este parte del repositorio se va a enseñar a como crear una regla customizada y usarla mediante una propuesta de procedimiento.
+En esta parte del repositorio se va a enseñar a como crear una regla customizada y usarla mediante una propuesta de procedimiento.
 
 El procedimiento de creación de la regla se definirá en el artículo
 
