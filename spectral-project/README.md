@@ -34,7 +34,7 @@ Nos encontramos en el directorio **"spectral-project/"**
 Este directorio se compone de:
 
 * **examples/**: Directorio que contiene los ficheros a analizar
-* **config/**: Directorio que contiene la configuración del proyecto
+* **config/**: Directorio que contiene toda la configuración del proyecto
   * **spectral/**: Directorio que contiene todo lo relacionado con la herramienta spectral
     * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
 * **src/**: Directorio que contiene código para una supuesta aplicación de calculadora
