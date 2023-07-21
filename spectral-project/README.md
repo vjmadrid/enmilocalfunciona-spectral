@@ -27,7 +27,7 @@
 
 ## Descripción
 
-En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contrato de API Web sobre OAS3 y que además incorpore el lintado con Spectral
+En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contrato de API Web sobre OAS3 y que además incorpore el lintado con Spectral dentro de su ciclo de desarrollo.
 
 Nos encontramos en el directorio **"spectral-project/"**
 
