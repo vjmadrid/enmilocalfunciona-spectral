@@ -1,11 +1,12 @@
 {
-  "name": "spectral-project",
+  "name": "spectral-project-with-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf package-lock.json && npm install",
     "node:version": "echo 'nodejs version: ' && node -v ",
+    "test": "jest",
     "spectral:oas:lint:one": "spectral lint ./examples/example1.yaml",
     "spectral:oas:lint": "spectral lint ./examples/*",
     "spectral:oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*"
@@ -13,6 +14,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@stoplight/spectral-core": "^1.18.0"
+    "@stoplight/spectral-core": "^1.18.0",
+    "@stoplight/spectral-parsers": "^1.0.3",
+    "@stoplight/spectral-ruleset-bundler": "^1.5.2",
+    "@stoplight/spectral-runtime": "^1.1.2",
+    "@stoplight/types": "^13.17.0",
+    "chai": "^4.3.7",
+    "jest": "^29.6.1"
   }
 }
