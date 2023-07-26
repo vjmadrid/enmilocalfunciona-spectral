@@ -40,7 +40,10 @@ En construcción:
   * Su directorio de trabajo es **"style-guide/"**
 * [Primeros pasos con Spectral (Parte 5) : Proyecto Node.js](xxx): xxx
   * Su directorio de trabajo es **"spectral-project/"**
-
+* [Primeros pasos con Spectral (Parte 6) : Proyecto Node.js con tests](xxx): xxx
+  * Su directorio de trabajo es **"spectral-projec-with-test/"**
+* [Primeros pasos con Spectral (Parte 7) : Proyecto Node.js con Gherkin](xxx): xxx
+  * Su directorio de trabajo es **"spectral-projec-with-gherkin/"**
 
 
 
