@@ -39,7 +39,7 @@ Este directorio se compone de:
     * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
 * **src/**: Directorio que contiene código para una supuesta aplicación de calculadora
   * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores ejemplos
-* **tests/**: Directorio que contiene test unitarios / integración sobre código implementado en el directorio "src/"
+
 
 
 
@@ -73,13 +73,6 @@ N/A
   * [Repositorio Git](https://github.com/stoplightio/spectral)
   * [Documentacion](https://stoplight.io/open-source/spectral)
 
-
-**Testing**
-
-* **jest** : Framework de Testing
-  * [npm](https://www.npmjs.com/package/jest)
-  * [Repositorio Git](https://github.com/jestjs/jest)
-  * [Documentacion](https://jestjs.io/)
 
 
 

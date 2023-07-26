@@ -1,4 +1,4 @@
-<h1>Primeros pasos con Spectral (Parte 5): Proyecto Node.js</h1>
+<h1>Primeros pasos con Spectral (Parte 6): Proyecto Node.js con tests</h1>
 
 
 
@@ -29,7 +29,7 @@
 
 En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contrato de API Web sobre OAS3 y que además incorpore el lintado con Spectral dentro de su ciclo de desarrollo.
 
-Nos encontramos en el directorio **"spectral-project/"**
+Nos encontramos en el directorio **"spectral-project-with-test/"**
 
 Este directorio se compone de:
 
@@ -39,7 +39,7 @@ Este directorio se compone de:
     * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
 * **src/**: Directorio que contiene código para una supuesta aplicación de calculadora
   * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores ejemplos
-* **tests/**: Directorio que contiene test unitarios / integración sobre código implementado en el directorio "src/"
+* **test/**: Directorio que contiene test unitarios / integración sobre código implementado en el directorio "src/"
 
 
 
@@ -70,6 +70,22 @@ N/A
 
 * **@stoplight/spectral-core** : Framework de Spectral
   * [npm](https://www.npmjs.com/package/@stoplight/spectral-core)
+  * [Repositorio Git](https://github.com/stoplightio/spectral)
+  * [Documentacion](https://stoplight.io/open-source/spectral)
+* **@stoplight/spectral-parsers** : Parseadores de Spectral
+  * [npm](https://www.npmjs.com/package/@stoplight/spectral-parsers)
+  * [Repositorio Git](https://github.com/stoplightio/spectral)
+  * [Documentacion](https://stoplight.io/open-source/spectral)
+* **@stoplight/spectral-ruleset-bundler** : Bundle Spectral Ruleset
+  * [npm](https://www.npmjs.com/package/@stoplight/spectral-ruleset-bundler)
+  * [Repositorio Git](https://github.com/stoplightio/spectral)
+  * [Documentacion](https://stoplight.io/open-source/spectral)
+* **@stoplight/spectral-runtime** : Bundle Spectral Ruleset
+  * [npm](https://www.npmjs.com/package/@stoplight/spectral-ruleset-bundler)
+  * [Repositorio Git](https://github.com/stoplightio/spectral)
+  * [Documentacion](https://stoplight.io/open-source/spectral)
+* **@stoplight/types** : Tipos de Spectral
+  * [npm](https://www.npmjs.com/package/@stoplight/types)
   * [Repositorio Git](https://github.com/stoplightio/spectral)
   * [Documentacion](https://stoplight.io/open-source/spectral)
 

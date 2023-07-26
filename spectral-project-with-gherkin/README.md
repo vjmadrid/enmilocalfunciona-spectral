@@ -1,4 +1,4 @@
-<h1>Primeros pasos con Spectral (Parte 6): Proyecto Node.js con Gherkin</h1>
+<h1>Primeros pasos con Spectral (Parte 7): Proyecto Node.js con Gherkin</h1>
 
 
 
@@ -27,7 +27,7 @@
 
 En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contrato de API Web sobre OAS3, donde además se hará uso de Gherkin para evaluar las reglas
 
-Nos encontramos en el directorio **"spectral-project/"**
+Nos encontramos en el directorio **"spectral-project-witth-gherkin/"**
 
 Este directorio se compone de:
 
@@ -37,7 +37,7 @@ Este directorio se compone de:
     * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
 * **src/**: Directorio que contiene código para una supuesta aplicación de calculadora
   * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores ejemplos
-* **tests/**: Directorio que contiene test unitarios / integración sobre código implementado en el directorio "src/"
+* **test/**: Directorio que contiene test unitarios / integración sobre código implementado en el directorio "src/"
 
 
 
