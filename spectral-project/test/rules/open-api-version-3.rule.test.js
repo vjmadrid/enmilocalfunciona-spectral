@@ -1,4 +1,4 @@
-const { retrieveDocument, setupSpectral } = require('./spectral-test-helper')
+const { retrieveDocument, setupSpectral, resultsForCode, getErrors} = require('./spectral-test-helper')
 //const {expect, should} = require('chai')
 const expect = require('chai').expect
 const assert = require('chai').assert
@@ -15,6 +15,27 @@ test('OpenAPI has a `3` version', async () => {
     const results = await spectral.run(document)
 
     expect(results).to.have.length(0)
+
+})
+
+test('OpenAPI has a `3` version Type 2', async () => {
+    const spectral = await setupSpectral(RULESET_FILE_PATH)
+    const document = retrieveDocument('examples/example1.yaml')
+
+    const results = resultsForCode(await spectral.run(document), 'semver')
+
+    expect(results).to.have.length(0)
+
+})
+
+test('OpenAPI has a `3` version Type 3', async () => {
+    const spectral = await setupSpectral(RULESET_FILE_PATH)
+    const document = retrieveDocument('examples/example1.yaml')
+
+    const results = getErrors(await spectral.run(document))
+
+    expect(results).to.have.length(0)
+
 })
 
 test('OpenAPI does not have a `3` version', async () => {

@@ -20,6 +20,7 @@
     "@stoplight/spectral-parsers": "^1.0.3",
     "@stoplight/spectral-ruleset-bundler": "^1.5.2",
     "@stoplight/spectral-runtime": "^1.1.2",
+    "@stoplight/types": "^13.17.0",
     "chai": "^4.3.7",
     "jest": "^29.6.1"
   }
