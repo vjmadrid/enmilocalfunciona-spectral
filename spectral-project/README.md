@@ -14,10 +14,10 @@
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
 - [Configuración](#configuración)
-  - [Implementar comando de análisis de un fichero](#implementar-comando-de-análisis-de-un-fichero)
+  - [Implementar los comandos de análisis con Spectral](#implementar-los-comandos-de-análisis-con-spectral)
 - [Uso](#uso)
-  - [Ejecutar un análisis de un fichero](#ejecutar-un-análisis-de-un-fichero)
-  - [Ejecutar un análisis de todos los ficheros](#ejecutar-un-análisis-de-todos-los-ficheros)
+  - [Ejecutar un análisis de un fichero concreto](#ejecutar-un-análisis-de-un-fichero-concreto)
+  - [Ejecutar un análisis de todos los ficheros de un directorio](#ejecutar-un-análisis-de-todos-los-ficheros-de-un-directorio)
   - [Ejecutar un análisis de todos los ficheros con warning como error](#ejecutar-un-análisis-de-todos-los-ficheros-con-warning-como-error)
 - [Autor](#autor)
 
@@ -106,7 +106,7 @@ npm install
 
 ## Configuración
 
-### Implementar comando de análisis de un fichero
+### Implementar los comandos de análisis con Spectral
 
 Pasos a seguir:
 
@@ -138,7 +138,7 @@ Detalle:
 >
 >Todos los ejemplos harán uso de la configuración de spectral de **.spectral.yml**
 
-### Ejecutar un análisis de un fichero
+### Ejecutar un análisis de un fichero concreto
 
 Pasos a seguir:
 
@@ -154,7 +154,7 @@ npm run spectral:oas:lint:one
 
 
 
-### Ejecutar un análisis de todos los ficheros
+### Ejecutar un análisis de todos los ficheros de un directorio
 
 Pasos a seguir:
 
@@ -184,6 +184,7 @@ npm run spectral:oas:lint-warning-as-errors
 ```
 
 4. Verificar los resultados
+
 
 
 

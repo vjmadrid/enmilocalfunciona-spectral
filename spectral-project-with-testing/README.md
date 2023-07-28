@@ -1,4 +1,4 @@
-<h1>Primeros pasos con Spectral (Parte 6): Proyecto Node.js con tests</h1>
+<h1>Primeros pasos con Spectral (Parte 6): Proyecto Node.js + Testing</h1>
 
 
 
@@ -207,6 +207,7 @@ npm run spectral:oas:lint-warning-as-errors
 ```
 
 4. Verificar los resultados
+
 
 
 
