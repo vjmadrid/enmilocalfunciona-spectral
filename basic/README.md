@@ -34,7 +34,7 @@
 
 ## Descripción
 
-En este artículo se va a **enseñar** a **utilizar** la **herramienta por línea de comando** (tipo CLI) con diferentes **escenarios** definidos (cada uno con su propia casuística), de esta forma se verá al gran mayoría de las cosas que se pueden hacer con esta herramienta.
+En este artículo se va a **enseñar** a **utilizar** la **herramienta de Spectral por línea de comando** (tipo CLI) con diferentes **escenarios** definidos (cada uno con su propia casuística), de esta forma se verá la gran mayoría de las cosas que se pueden hacer con esta herramienta.
 
 Nos encontramos en el directorio **"basic/"**
 
