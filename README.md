@@ -46,6 +46,8 @@ En construcción:
 * [Primeros pasos con Spectral (Parte 7): Proyecto Node.js + Gherkin](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-7-proyecto-node-js-gherkin): xxx
   * Su directorio de trabajo es **"spectral-projec-with-gherkin/"**
 
+* [Primeros pasos con Spectral (Parte 8): Integración con VSC](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-8-integracion-con-vsc): xxx
+
 
 
 
