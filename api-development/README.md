@@ -35,7 +35,7 @@ Este directorio se compone de:
   * **rules/**: Subdirectorio que contiene los ficheros de reglas a utilizar
     * Este directorio contendrá la regla definida en el tutorial
 
-Recordar que si se tiene alguna duda con la herramienta se puede acceder al primer artículo donde se puede practicar mucho, además los ejemplos estan basados en el uso de APIs
+Recordar que si se tiene alguna duda con la herramienta se puede acceder al primer artículo donde se puede practicar mucho, además los ejemplos están basados en el uso de APIs
 
 * [Primeros pasos con Spectral (Parte 1)](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral): Artículo de introducción a la herramienta Spectral que hace uso de diferentes ejemplos y que explica diferentes enfoques de diseño.
  * Su directorio de trabajo es **"basic/"**
