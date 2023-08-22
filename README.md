@@ -32,10 +32,10 @@ Este **repositorio** se encarga de servir como una **estructura** de los **recur
 * [Primeros pasos con Spectral (Parte 3): Desarrollando APIs](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-3-desarrollando-apis): Artículo que enseñará a como enfocar Spectral al desarrollo de APIs.
   * Su directorio de trabajo es **"api-development/"**
 
-En construcción:
-
 * [Primeros pasos con Spectral (Parte 4): Guía de Estilo](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-4-guia-de-estilo-de-apis): Artículo que enseñará a como plantear una guía de estilo centralizada de diferentes maneras : dentro de un arquetipo, carga local de ficheros, uso en librerías de arquitecturas, uso mediante URL, etc.
   * Su directorio de trabajo es **"style-guide/"**
+
+En construcción:
 
 * [Primeros pasos con Spectral (Parte 5): Proyecto Node.js](https://www.enmilocalfunciona.io/): xxx
   * Su directorio de trabajo es **"spectral-project/"**
