@@ -47,7 +47,7 @@ Este directorio se compone de:
 
 ## Estado
 
-Este proyecto se encuentra en construcción
+Este proyecto se encuentra en versión: 1.0.0
 
 
 

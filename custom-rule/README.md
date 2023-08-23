@@ -47,7 +47,7 @@ Se va hacer uso del fichero ".spectral.yml" como fichero de Ruleset utilizado
 
 ## Estado
 
-Este proyecto se encuentra en construcción
+Este proyecto se encuentra en versión: 1.0.0
 
 
 

@@ -38,7 +38,7 @@ Este directorio se compone de:
   * **spectral/**: Directorio que contiene todo lo relacionado con la herramienta spectral
     * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
 * **src/**: Directorio que contiene código para una supuesta aplicación de calculadora
-  * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores ejemplos
+  * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores artículos
 
 
 
@@ -46,7 +46,7 @@ Este directorio se compone de:
 
 ## Estado
 
-Este proyecto se encuentra en construcción
+Este proyecto se encuentra en versión: 1.0.0
 
 
 

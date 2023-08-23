@@ -46,7 +46,7 @@ Recordar que si se tiene alguna duda con la herramienta se puede acceder al prim
 
 ## Estado
 
-Este proyecto se encuentra en construcción
+Este proyecto se encuentra en versión: 1.0.0
 
 
 
