@@ -14,11 +14,9 @@
 - [Pre-Requisitos](#pre-requisitos)
 - [Instalación](#instalación)
 - [Configuración](#configuración)
-  - [Implementar comando de análisis de un fichero](#implementar-comando-de-análisis-de-un-fichero)
+  - [Implementar comando testing](#implementar-comando-testing)
 - [Uso](#uso)
-  - [Ejecutar un análisis de un fichero](#ejecutar-un-análisis-de-un-fichero)
-  - [Ejecutar un análisis de todos los ficheros](#ejecutar-un-análisis-de-todos-los-ficheros)
-  - [Ejecutar un análisis de todos los ficheros con warning como error](#ejecutar-un-análisis-de-todos-los-ficheros-con-warning-como-error)
+  - [Ejecutar testing](#ejecutar-testing)
 - [Autor](#autor)
 
 
@@ -29,7 +27,9 @@
 
 En esta parte del repositorio se va a enseñar a como implementar un proyecto sobre Node.js que permita desarrollar un contrato de API Web sobre OAS3 y que además incorpore el lintado con Spectral dentro de su ciclo de desarrollo.
 
-Nos encontramos en el directorio **"spectral-project-with-test/"**
+Además incorporaremos testing unitario sobre nuestra reglas customizadas de Spectral.
+
+Nos encontramos en el directorio **"spectral-project-with-testing/"**
 
 Este directorio se compone de:
 
@@ -38,7 +38,7 @@ Este directorio se compone de:
   * **spectral/**: Directorio que contiene todo lo relacionado con la herramienta spectral
     * **rules/**: Subdirectorio que contiene los ficheros de reglas utilizados
 * **src/**: Directorio que contiene código para una supuesta aplicación de calculadora
-  * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores ejemplos
+  * Nota: En este caso NO será necesario utilizar el código implementado para realizar un API, sino que servirá de ejemplo para usar fase de testing en posteriores artículos
 * **test/**: Directorio que contiene test unitarios / integración sobre código implementado en el directorio "src/"
 
 
@@ -46,7 +46,7 @@ Este directorio se compone de:
 
 ## Estado
 
-Este proyecto se encuentra en construcción
+Este proyecto se encuentra en versión: 1.0.0
 
 
 
@@ -96,6 +96,10 @@ N/A
   * [npm](https://www.npmjs.com/package/jest)
   * [Repositorio Git](https://github.com/jestjs/jest)
   * [Documentacion](https://jestjs.io/)
+* **chai** : Framework de assert para BDD / TDD
+  * [npm](https://www.npmjs.com/package/chai)
+  * [Repositorio Git](https://github.com/chaijs/chai)
+  * [Documentacion](https://www.chaijs.com/)
 
 
 
@@ -129,7 +133,7 @@ npm install
 
 ## Configuración
 
-### Implementar comando de análisis de un fichero
+### Implementar comando testing
 
 Pasos a seguir:
 
@@ -138,18 +142,11 @@ Pasos a seguir:
 ```bash
 "scripts": {
     ...
-    "spectral:oas:lint:one": "spectral lint ./examples/example1.yaml",
-    "spectral:oas:lint": "spectral lint ./examples/*",
-    "spectral:oas:lint-warning-as-errors": "spectral lint -F warn ./examples/*"
+    "test": "jest",
     ...
   },
 ```
 
-Detalle:
-
-* **spectral:oas:lint:one**: Análisis de Spectral sobre un fichero seleccionado del directorio examples/
-* **spectral:oas:lint**: Análisis de Spectral sobre todos los ficheros del directorio examples/
-* **spectral:oas:lint-warning-as-errors**: Análisis de Spectral sobre todos los ficheros del directorio examples/ generando un error al detectar al menos un warning, es decir, para la ejecución con un warning
 
 
 
@@ -157,11 +154,9 @@ Detalle:
 
 ## Uso
 
->**Nota:**
->
->Todos los ejemplos harán uso de la configuración de spectral de **.spectral.yml**
 
-### Ejecutar un análisis de un fichero
+
+### Ejecutar testing
 
 Pasos a seguir:
 
@@ -170,43 +165,11 @@ Pasos a seguir:
 3. Ejecutar el siguiente comando
 
 ```bash
-npm run spectral:oas:lint:one
+npm run test
 ```
 
 4. Verificar los resultados
 
-
-
-### Ejecutar un análisis de todos los ficheros
-
-Pasos a seguir:
-
-1. Arrancar un terminal
-2. Localizar el PATH del proyecto
-3. Ejecutar el siguiente comando
-
-```bash
-npm run spectral:oas:lint
-```
-
-4. Verificar los resultados
-
-
-
-
-### Ejecutar un análisis de todos los ficheros con warning como error
-
-Pasos a seguir:
-
-1. Arrancar un terminal
-2. Localizar el PATH del proyecto
-3. Ejecutar el siguiente comando
-
-```bash
-npm run spectral:oas:lint-warning-as-errors
-```
-
-4. Verificar los resultados
 
 
 

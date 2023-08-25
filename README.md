@@ -38,10 +38,10 @@ Este **repositorio** se encarga de servir como una **estructura** de los **recur
 * [Primeros pasos con Spectral (Parte 5): Proyecto Node.js](https://www.enmilocalfunciona.io/): Artículo que enseñará a integrar Spectral dentro del ciclo de construcción de una aplicación Node.js
   * Su directorio de trabajo es **"spectral-project/"**
 
-En construcción:
-
-* [Primeros pasos con Spectral (Parte 6): Proyecto Node.js + Testing](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-6-proyecto-node-js-testing): xxx
+* [Primeros pasos con Spectral (Parte 6): Proyecto Node.js + Testing](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-6-proyecto-node-js-testing): Artículo que enseñará a relizar testing unitario sobre Spectral en una aplicación Node.js
   * Su directorio de trabajo es **"spectral-projec-with-testing/"**
+
+En construcción:
 
 * [Primeros pasos con Spectral (Parte 7): Proyecto Node.js + Gherkin](https://www.enmilocalfunciona.io/primeros-pasos-con-spectral-parte-7-proyecto-node-js-gherkin): xxx
   * Su directorio de trabajo es **"spectral-projec-with-gherkin/"**
